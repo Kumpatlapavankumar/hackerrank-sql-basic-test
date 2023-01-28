@@ -1,0 +1,9 @@
+select t1.roll_number,t1.name from 
+student_information as t1
+inner JOIN
+examination_marks as  t2
+on
+t1.roll_number=t2.roll_number
+group by t2.roll_number
+having 
+sum(t2.subject_one + t2.subject_two + t2.subject_three)<100
