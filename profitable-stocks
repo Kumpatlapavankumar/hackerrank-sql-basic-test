@@ -1,0 +1,6 @@
+SELECT t1.stock_code
+FROM price_today as t1
+INNER JOIN price_tomorrow as t2
+ON t1.stock_code = t2.stock_code
+WHERE t2.price>t1.price
+ORDER BY stock_code asc;
