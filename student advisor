@@ -1,0 +1,5 @@
+SELECT roll_number,name
+FROM student_information as t1
+INNER JOIN faculty_information as t2
+ON t1.advisor = t2.employee_ID
+WHERE (t2.gender = 'M' and t2.salary>15000) or (t2.gender = 'F' and t2.salary>20000);
